@@ -2,12 +2,76 @@
 <html>
     <head>
         <title>{$title_name}</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <js href="__PUBLIC__/js/jquery-1-11-2-min.js" />
+        <css href="__PUBLIC__/css/layout.css" />
     </head>
-    {__CONTENT__}
-    <footer>
-        {$header}
-    </footer>
+    <body>
+        <div class="top-nav-wrap ">
+            <div class="top-nav">
+                <div class="tn-bg">
+                    <div class="tn-header">
+                        <div class="tn-nav">
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>消息</i>
+                                </a>
+                            </div>
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>我的订单</i>
+                                </a>
+                            </div>
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>积分商城</i>
+                                </a>
+                            </div>
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>联系客服</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tn-close" node-type="close" style="display: none;"><a href="javascript:;"><i></i>关闭置顶</a></div>
+                        <div class="tn-nav">
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>消息</i>
+                                </a>
+                            </div>
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>我的订单</i>
+                                </a>
+                            </div>
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>积分商城</i>
+                                </a>
+                            </div>
+                            <div class="tn-title" node-type="sethome">
+                                <a href="javascript:;" class="tn-tab">
+                                    <i>联系客服</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div style="width:100%;border-top: 2px solid #2CABC4"></div>-->
+        <!--        <div id="container" style="width:100%; border-top: 2px solid #2CABC4">
+                    <div id="header">
+                        <div id="logo"></div>
+                    </div>
+                    <div id="content">
+                        <div id="content-left"></div>
+                        <div id="content-main">{__CONTENT__}</div>
+                    </div>
+                    <div class="clear">如何你上面用到float,下面布局开始前最好清除一下。</div>
+                    <div id="footer">{$header}</div>
+                </div>-->
+    </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 return array(
     //'配置项'=>'配置值'
+    'LAYOUT_ON'=>true,
     // URL伪静态后缀设置
     'URL_HTML_SUFFIX'       =>  'shtml',  
     // 默认页面

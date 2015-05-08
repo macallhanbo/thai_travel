@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-5-8, 15:25:38
+    Author     : macall
+*/
+body, .top-nav{
+  margin: 0;
+  padding: 0;
+}
+.top-nav-wrap {
+  width: 100%;
+  min-width: 1000px;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top-nav {
+  height: 41px;
+  border-top: 2px solid #00afc7;
+  border-bottom: 1px solid #EDEEF0;
+  background-color: #FCFCFC;
+}
+.top-nav .tn-bg {
+  height: 41px;
+  overflow: hidden;
+}
+.top-nav .tn-header {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Microsoft YaHei", "微软雅黑", "SimSun", "宋体";
+}
+.tn-close {
+  float: right;
+  height: 21px;
+  margin: 8px 0 0 3px;
+  line-height: 21px;
+  _line-height: 22px;
+  width: 54px;
+  height: 21px;
+  overflow: hidden;
+  border: 1px solid #E2E2E2;
+  font-size: 12px;
+}
+.top-nav .tn-nav {
+  float: left;
+  _display: inline;
+   margin: 0 0 0 151px; 
+}
+.top-nav .tn-title {
+  float: left;
+  font-size: 12px;
+  position: relative;
+}
+.top-nav i {
+  font-style: normal;
+  font-weight: normal;
+}
+.top-nav .tn-title .tn-tab {
+  border: 1px solid #FCFCFC;
+  border-width: 0 1px;
+  color: #4C4C4C;
+  display: inline-block;
+  line-height: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;
+  padding: 0 2px 0 0;
+}
+.top-nav .tn-title .tn-tab i{
+  display: inline-block;
+  height: 17px;
+  padding: 12px 9px 12px 16px;
+  vertical-align: bottom;
+  _overflow: hidden;
+}
