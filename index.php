@@ -18,9 +18,15 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 
 // 定义应用目录
-define('APP_PATH','./Application/');
+define('APP_PATH','./Apps/AppSrc/');
+
+// 定义框架目录
+define('THINK_PATH', realpath('./Apps/Think/').'/');
+
+// 定义应用环境（development为开发环境 staging为测试环境 official为正式环境）
+define('APP_ENV','development');
 
 // 引入ThinkPHP入口文件
-require './ThinkPHP/ThinkPHP.php';
+require THINK_PATH.'ThinkPHP.php';
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单
