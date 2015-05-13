@@ -1,0 +1,420 @@
+@charset "utf-8";
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline
+}
+body {
+    font:normal 12px/1.5 arial,simsun,sans-serif;
+    background:#fff;
+    color:#555;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%
+}
+small {
+    font-size:12px
+}
+ul,ol {
+    list-style:none
+}
+a {
+    text-decoration:none;
+    color:#0069ca
+}
+a:hover {
+    text-decoration:none;
+    color:#f60
+}
+fieldset,img {
+    border:0
+}
+button,input,select,textarea {
+    font-size:100%
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0
+}
+select {
+    vertical-align:middle
+}
+.ad{
+    clear:both;
+    height:0;
+    overflow:hidden
+}
+.th-footer {
+    clear:both;
+    margin:0 auto;
+    padding:10px 0;
+    width:979px;
+    line-height:1.231;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:12px;
+    color:#848484
+}
+.th-footer .th-inner {
+    margin:0 10px;
+    text-align:right
+}
+.th-footer .th-cr {
+    margin-right:58px;
+    padding-bottom:12px
+}
+.th-footer .th-links {
+    margin:0;
+    padding:2px 0 0;
+    list-style:none
+}
+.th-footer .th-links a,.th-footer .th-links a:visited {
+    margin:0 5px;
+    text-decoration:none;
+    color:#848484
+}
+.th-footer .th-links a:hover {
+    color:#f60
+}
+.th-footer .th-links a.emph,.th-footer .th-links a.emph:visited {
+    color:#f60
+}
+.th-footer .th-copyright {
+    margin:0;
+    padding:8px 5px 0 0
+}
+.th-footer .th-copyright a,.th-footer .th-copyright a:visited {
+    text-decoration:none;
+    color:#848484
+}
+.th-btn {
+    color:#FFF;
+    background:#0b60f0;
+    border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border:1px solid transparent;
+    text-align:center;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:12px;
+    line-height:18px;
+    text-decoration:none;
+    outline:0;
+    border-radius:2px
+}
+.th-btn:hover {
+    background-color:#2070f8
+}
+.th-btn-orange {
+    background:#ff8200;
+    height:30px;
+    font-size:14px
+}
+.th-btn-orange:hover {
+    background:#ff9c00
+}
+.btn-disable,.btn-disable:hover {
+    background:#b6b6b6;
+    color:white
+}
+.btn-readonly,.btn-readonly:hover {
+    background:#b6b6b6;
+    color:white
+}
+.th-textbox {
+    padding:0 0 0 10px;
+    border:1px solid #ccc;
+    color:#666;
+    outline:0 none;
+    font-size:14px;
+    background-color:#fff;
+    font-family:tahoma,arial,sans-serif
+}
+.th-textbox:hover,.textbox-hover {
+    border-color:#5abec6
+}
+input.th-textbox::-ms-clear,input.th-textbox::-ms-reveal {
+    display:none
+}
+.th-textbox-group {
+    padding:10px 0;
+    color:#999;
+    font-family:tahoma,arial,sans-serif;
+    height:36px;
+    font-size:0;
+    font-size:1px\9;
+    -webkit-text-size-adjust:none;
+    vertical-align:middle
+}
+.th-textbox-group span,.th-textbox-group label {
+    font-size:12px;
+    font-family:tahoma,arial,sans-serif;
+    vertical-align:middle
+}
+.th-textbox-group .textbox-placeholder {
+    font-size:14px;
+    font-family:tahoma,arial,sans-serif
+}
+.textbox-group-hidden {
+    display:none
+}
+.th-textbox-group .th-label {
+    display:inline-block;
+    width:80px;
+    text-align:right;
+    font-size:14px;
+    vertical-align:middle
+}
+.th-textbox-group .th-textbox,.th-textbox-group .textbox-preview-show {
+    display:inline-block;
+    line-height:34px;
+    height:34px;
+    width:244px;
+    box-sizing:content-box;
+    margin-left:10px;
+    font-size:14px;
+    font-family:tahoma,arial,sans-serif;
+    vertical-align:middle
+}
+.th-textbox-group .textbox-hidden {
+    display:none
+}
+.th-textbox-group .th-textbox-short {
+    width:97px
+}
+.th-textbox-group .vcodeimg {
+    display:inline-block;
+    width:96px;
+    height:30px;
+    line-height:30px;
+    margin-left:10px;
+    vertical-align:middle
+}
+.th-textbox-group .th-btn {
+    display:inline-block;
+    width:96px;
+    margin-left:10px;
+    vertical-align:middle
+}
+.th-textbox-group .th-btn {
+    _position:relative;
+    _top:8px;
+    _vertical-align:baseline;
+    padding-top:2px\9;
+    line-height:18px
+}
+.th-textbox-group .a {
+    display:inline-block;
+    font-size:12px;
+    font-family:tahoma,arial,sans-serif;
+    color:#006bc8;
+    text-decoration:none;
+    margin-left:5px;
+    vertical-align:middle
+}
+.th-textbox-group .a:hover {
+    text-decoration:none;
+    color:#f60
+}
+.th-textbox-group .th-note {
+    display:none;
+    background:0;
+    margin-left:7px;
+    min-height:16px;
+    max-height:35px;
+    width:230px;
+    font-size:12px;
+    margin-left:10px;
+    vertical-align:middle
+}
+.password-tooltip {
+    position:relative;
+    z-index:100000
+}
+.password-tooltip ul {
+    display:block;
+    position:absolute;
+    top:47px;
+    left:109px;
+    list-style:outside none none;
+    margin:0;
+    padding:0;
+    padding:21px 0 4px 21px;
+    color:#666;
+    height:82px;
+    width:195px;
+    background:url(//source.qunarzz.com/usercenter/register/bg-passwordtip2.png) 0 0 no-repeat;
+    _background-image:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//source.qunarzz.com/usercenter/register/bg-passwordtip2.png");
+    z-index:1000
+}
+.password-tooltip ul li {
+    line-height:23px;
+    height:23px;
+    width:165px;
+    padding-left:20px;
+    background-color:white;
+    vertical-align:middle;
+    font-size:12px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+.password-tooltip-hidden ul {
+    display:none
+}
+.password-tooltip ul li {
+    color:#666;
+    background:0 center no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAIAAABiqgrIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACBSURBVChTxZCxEsAQEETz/1+Y0tApaRl5sTeSwkyo8gpu99Y4jrbMTrTWauUXTzTn7Jw7OxRI+QOLxhi997SRQIHEVEjcUTVKKeZ1kDpsWtHpdYBJy4SiDMdqxgu1TGxHNwbAWn0WG/8SQqCBHIcnn6UqpcR1DAfTkZ7oJz9HW7sAn/a6I6ckHQIAAAAASUVORK5CYII=);
+    *background:0 2px no-repeat url(//source.qunarzz.com/usercenter/register/bg-tooltip.png)
+}
+.password-tooltip .right {
+    color:#666;
+    background:0 center no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVChTY/hPHCBa3d+/fyGsky8PVp5ID95hC0RAxsmXhyDiEAA1b9HNqVF71fJPitRc4AIiIAPIBQpCZIEApA6oFShadZ677iIHHAG5QEGgJQh1QFuABiArgiCgIFAKoS5kp231BS40RUAEFARKEVYHdCjQTwh1xNoLdCxR/gACYBBE71MrwB8uEHDiBSScbYAIyICbBAEIdfgBcer+/wcAYzmbdKNShH4AAAAASUVORK5CYII=);
+    *background:0 -43px no-repeat url(//source.qunarzz.com/usercenter/register/bg-tooltip.png)
+}
+.password-tooltip .error {
+    color:red;
+    background:0 center no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAIAAACwQdIgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACuSURBVChTjZBBDoQgDEXncOpxXKpn8ToieBgWsgDDApjfKUbiguGnCb/l0QKf1KZmLoSQbVUP54U4x1H3PQLG7zvXWZmz62rm2SsVnUN4Kc00ocgQRByOohqNybWfkNJJITgljqZIyXkptMcWe+L0MERrOS+FIrbYVznn8Cb291ylOC/1novL4sr/34GF/mVZ/HHE60KgE6D3v7Dz24YpuusQdJO7E+vh6mrjUvoC5WIb6qXDtwUAAAAASUVORK5CYII=);
+    *background:0 -20px no-repeat url(//source.qunarzz.com/usercenter/register/bg-tooltip.png)
+}
+.th-register-page {
+    width:980px;
+    margin:0 auto;
+    color:#555
+}
+.th-page-title {
+    width:980px;
+    line-height:53px;
+    height:53px;
+    padding:20px 11px
+}
+.th-page-title div {
+    font:normal 18px/18px "microsoft yahei",arial,sans-serif;
+    padding-left:20px;
+    float:left;
+    padding-top:34px
+}
+.th-page-logo {
+    display:block;
+    width:138px;
+    height:53px;
+    float:left;
+    cursor:pointer;
+    background:url(/thai/Public/img/thai_travel_logo.png)
+}
+.th-page-content {
+    margin:0 auto;
+    background:#fff;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    min-height:455px;
+    *height:455px
+}
+.th-page-content form {
+    float:right;
+    width:615px;
+    /*clear:both;*/
+    padding:40px 0 0 0
+}
+.th-page-sidebar {
+    float:left;
+    width:320px;
+    height:455px;
+    padding-left:30px
+}
+.th-page-sidebar .th-msg-note {
+    padding:10px;
+    font:normal 12px/25px simsun;
+    margin-top:44px
+}
+.th-page-sidebar .th-msg-note dt {
+    font-size:14px
+}
+.th-page-sidebar .th-msg-note ul {
+    padding-left:14px;
+    list-style:disc outside none
+}
+.th-page-sidebar .th-msg-note li {
+    padding-top:5px
+}
+.th-page-sidebar .th-msg-note .emph {
+    color:#fd017c
+}
+.th-textbox-group-rule {
+    line-height:20px;
+    height:20px;
+    padding:5px 0 0 0;
+    margin-left:85px;
+    *margin-left:87px
+}
+.th-textbox-group-rule .a {
+    display:inline;
+    margin-left:0;
+    height:18px
+}
+.th-textbox-group-rule * {
+    vertical-align:middle
+}
+.th-textbox-group-submit {
+    margin:10px 0 0 78px;
+    *margin-left:80px;
+    vertical-align:middle
+}
+.th-textbox-group-submit .a {
+    display:inline;
+    height:18px;
+    vertical-align:baseline
+}
+.th-textbox-group-submit .th-btn {
+    width:116px;
+    height:30px;
+    font-size:14px;
+    color:white;
+    border:0
+}
+.th-textbox-group-submit span {
+    display:inline-block;
+    margin-left:5px;
+    font-size:12px;
+    vertical-align:middle
+}
+input {
+    outline:0
+}
+.th-header {
+    width:100%;
+    height:28px;
+    border-bottom:1px solid #ddd;
+    background-color:#f5f5f5
+}
+.th-header .t-header-nav {
+    width:980px;
+    margin:0 auto
+}
+.th-header .t-header-nav ul {
+    float:right;
+    display:inline;
+    line-height:14px;
+    padding-top:8px;
+    font-family:tahoma,arial,sans-serif;
+    height:14px
+}
+.th-header .t-header-nav li {
+    float:left;
+    display:inline
+}
+.th-header .t-header-nav li a {
+    text-decoration:none;
+    color:#555
+}
+.th-header .t-header-nav li .t-header-a {
+    padding:0 8px
+}
+.th-header .t-header-nav li .t-header-a-fix {
+    padding:0 8px;
+    color:#ff7c00
+}

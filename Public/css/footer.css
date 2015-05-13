@@ -1,0 +1,199 @@
+﻿.th-footer .th-copyright {
+	padding:7px 0 0;
+	line-height:22px;
+	margin: 0;
+}
+.th-footer .th-copyright span, .th-footer .th-copyright a, .th-footer .th-copyright a:visited {
+	margin-right:7px;
+	padding:2px 0;
+	color:#999;
+	text-decoration: none;
+}
+.th-footer .th-copyright .th-24-hour {
+	background:url(/thai/Public/img/thai_24h.png) no-repeat left center;
+	padding-left:20px;
+}
+.th-footer .th-about {
+	display: inline-block;
+	*zoom:1;
+	*display:inline;
+	width:110px;
+	text-align:left;
+	border:1px solid transparent;
+	_border:0;
+	_padding:1px;
+	white-space:nowrap;
+}
+.th-footer .th-about a {
+	padding-left:6px;
+}
+.th-footer .th-about .th-about-link {
+	margin:0;
+	*zoom:1;
+}
+.th-footer .th-about.hover {
+	border-color:#ddd;
+	z-index: 999;
+	background: #fff;
+}
+.th-footer .th-about.hover .th-about-link {
+	color:#ff9e5e;
+	margin:0;
+}
+.th-footer .th-about.hover .th-about-list {
+	display: block !important;
+}
+.th-footer .th-about .th-about-list {
+	position: absolute;
+	left:-1px;
+	bottom:22px;
+	border:1px solid #ddd;
+	background: #fff;
+	width:110px;
+	display:none;
+	white-space:normal;
+}
+.th-footer .th-about .th-about-list a {
+	display: block;
+	margin:0;
+	*margin:0 !important;
+	*width: 70%;
+}
+.th-footer .th-about .th-about-list a:hover {
+	color:#666;
+	background: #e2e2e2;
+	*background:#fff;
+	*color:#ff9e5e;
+}
+.th-footer .th-about i {
+	font-size:0;
+	background:url(/images/common/hf/arc.png) no-repeat left bottom;
+	width:7px;
+	height:4px;
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	margin:0 0 2px 3px;
+}
+.th-footer .th-about.hover i {
+	background-position:0 0;
+}
+.th-footer .th-list-wrapper {
+	height:0;
+	position:relative;
+	z-index: 999;
+	*float: left;
+}
+.th-footer {
+	clear: both;
+	margin: 0 auto;
+	padding: 15px 0 25px;
+	width: 979px;
+	line-height: 1.231;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #848484;
+	position:relative;
+	z-index: 999;
+}
+.th-footer .inner {
+	margin: 0 10px;
+	text-align: right;
+}
+.th-footer .gs {
+	float: right;
+	margin: 0 20px 0 0;
+}
+.th-footer .th-cr {
+	margin-right: 0;
+	padding-bottom: 11px;
+	text-align:center;
+}
+.th-footer .th-links {
+	margin: 0;
+	padding: 2px 0 0;
+	list-style: none;
+	color:#999;
+	display:block;
+}
+.th-footer .th-links span {
+	*display:inline;
+	*zoom:1;
+}
+.th-footer .th-links a, .th-footer .th-links a:visited {
+	margin: 0 5px;
+	text-decoration: none;
+	color: #999;
+	display:inline-block;
+	*zoom:1;
+	*display:inline;
+	height:22px;
+	line-height: 22px;
+	white-space:nowrap;
+}
+.th-footer .th-links a:hover {
+	color: #f60;
+}
+.th-footer .th-links a.emph, .th-footer .th-links a.emph:visited {
+	color: #ff5555;
+}
+.th-footer .clr {
+	clear:both;
+	height:0;
+	overflow:hidden;
+}
+.th-footer .th-stanadrd-list {
+	margin-bottom:10px;
+}
+.th-footer .th-stanadrd-list ul {
+	width:545px;
+	margin:0 auto;
+	padding-bottom:4px;
+	overflow:hidden;
+}
+.th-footer .th-stanadrd-list li {
+	float:left;
+	margin-right:10px;
+	display:inline;
+}
+.th-footer .th-stanadrd-list li a {
+	display:block;
+	width:100%;
+	height:30px;
+}
+.th-footer .th-stanadrd-list li a span, .th-footer .th-stanadrd-list li.f_icon_pata span {
+	position:relative;
+	z-index:-1;
+	color:#0086A0;
+}
+.th-footer .th-stanadrd-list .th_icon_knet {
+	width:88px;
+	height:30px;
+	background:url(/thai/Public/img/thai_travel_footer_v10.png) -431px 0 no-repeat;
+	margin-right:0;
+}
+.th-footer .th-stanadrd-list .th_icon_szfw {
+	width:87px;
+	height:30px;
+	background:url(/thai/Public/img/thai_travel_footer_v10.png) -339px 0 no-repeat;
+}
+.th-footer .th-stanadrd-list .th_icon_beian {
+	width:78px;
+	height:30px;
+	background:url(/thai/Public/img/thai_travel_footer_v10.png) -256px 0 no-repeat;
+}
+.th-footer .th-stanadrd-list .th_icon_itrust {
+	width:91px;
+	height:30px;
+	background:url(/thai/Public/img/thai_travel_footer_v10.png) -160px 0 no-repeat;
+}
+.th-footer .th-stanadrd-list .th_icon_pci {
+	width:49px;
+	height:30px;
+	background:url(/thai/Public/img/thai_travel_footer_v10.png) -106px 0 no-repeat;
+}
+.th-footer .th-stanadrd-list .th_icon_wosign {
+	width:101px;
+	height:30px;
+	background:url(/thai/Public/img/thai_travel_footer_v10.png) 0 0 no-repeat;
+}

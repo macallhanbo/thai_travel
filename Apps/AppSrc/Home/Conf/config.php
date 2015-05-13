@@ -12,6 +12,7 @@ return array(
     'URL_ROUTER_ON' => true,
     // 设置路由规则
     'URL_ROUTE_RULES' => array(
-        'hotel/index.shtml' => array('Home/Hotel/index', array('id', 'string'))
+        'index' => array('Home/Index/index'),
+        'regist' => array('Home/Index/regist'),
     ),
 );

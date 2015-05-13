@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="__PUBLIC__/css/footer.css" type="text/css"/>
+        <link rel="stylesheet" href="__PUBLIC__/css/user-register.css" type="text/css">
+        <title>泰游记-用户注册</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--        <css href="__PUBLIC__/css/user-register.css" />
+        <css href="__PUBLIC__/css/footer.css" />-->
+    </head>
+    <body>
+        <div class="th-header">
+            <div class="t-header-nav">
+                <ul>
+                    <li id="user_login">
+                        <a href="###">登录</a>
+                    </li>
+                    <li>
+                        <a href="###" class="t-header-a">注册</a>|
+                    </li>
+                    <li>
+                        <a href="__ROOT__/index.html" class="t-header-a-fix">泰游记网首页</a>|
+                    </li>
+                    <li>
+                        <a href="###" class="t-header-a">联系客服</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="th-register-page">
+            <div class="th-page-title">
+                <a class="th-page-logo" href="__ROOT__/index.html"></a>
+                <div>帐号注册</div>
+            </div>
+            <div style="align:center; text-align:center;padding-bottom:10px;padding-left:5px;">
+                <div style="width: 100%; display: none;"></div>
+                <abbr id="banner_reg_top" style="display: none;"></abbr>
+            </div>
+            <div class="th-page-content" id="registerPage" data-viewmodel="RegisterViewModel">
+                <div class="th-page-sidebar">
+                    <div class="th-msg-note">
+                        <dl>
+                            <dt>注册成为“泰游记”的用户后，您可以：</dt>
+                            <dd>
+                                <ul>
+                                    <li>畅游与泰游记合作的<b class="emph">机票</b>、<b class="emph">酒店</b>、<b class="emph">度假</b>代理商网站，轻松管理订单</li>
+                                    <li>查询、计划、管理您的预订信息</li>
+                                    <li>享受优质超低价格<b class="emph">团购</b>服务</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div style="width:320px;height:170px;float:right;overflow: hidden;">
+                        <!--<iframe id="banner_reg_left" src="" data-ad-type="qad" data-vataposition="QNR_ODM=_CN" data-tag="99" data-rows="1" data-cur_page_num="0" data-rep="1" data-f="s" width="100%" height="0" frameborder="0" scrolling="no"></iframe>-->
+                        <div style="width: 100%; height: 178px; display: none;"></div>
+                        <iframe height="0" frameborder="0" scrolling="no" src="localhost/thai/Public/img/t_pic.jpg" style="width: 100%; height: 170px;"></iframe>
+                        <abbr id="banner_reg_left" style="display: none;"></abbr>
+                    </div>
+                    <div class="ad"></div>
+                </div>
+                <form>
+                    <input type="hidden" value="1" name="usertype" id="usertype">
+                    <input type="hidden" value="" name="ref" id="ref">
+                    <div class="th-textbox-group" data-model="email" data-controltype="TextBoxGroup" id="registerPage_email_1">
+                        <label class="th-label">注册邮箱</label>
+                        <input class="th-textbox" type="text" placeholder="请输入注册邮箱" autocomplete="off">
+                        <span class="th-note"></span>
+                    </div>
+                    <div class="th-textbox-group" data-model="password" data-controltype="TextBoxGroupPassword" id="registerPage_password_1">
+                        <label class="th-label">登录密码</label>
+                        <input class="th-textbox" type="password" placeholder="请输入登录密码" maxlength="30">
+                        <span class="th-note">&nbsp;</span>
+                    </div>
+                    <div class="th-textbox-group" data-model="vcode" data-controltype="TextBoxGroupVCode" id="registerPage_vcode_1">
+                        <label class="th-label">验证码</label>
+                        <input class="th-textbox th-textbox-short" type="text" name="vcode" placeholder="请输入验证码" autocomplete="off">
+                        <img class="vcodeimg" title="" src="https://user.qunar.com/captcha//api/image?k={en7mni(z&amp;p=ucenter_register&amp;c=99b054becba8690183f1f7f57e27a690">
+                        <a class="a vcodeimg-changebtn" href="javascript:;">换一张</a>
+                        <span class="th-note"></span>
+                    </div>
+                    <div class="th-textbox-group" data-model="mcode" data-controltype="TextBoxGroupVCode" id="registerPage_mcode_1">
+                        <label class="th-label">激活码</label>
+                        <input type="text" class="th-textbox th-textbox-short" name="verifycode" placeholder="请输入激活码" autocomplete="off">
+                        <button class="th-btn" data-model="btnMcode" data-controltype="Button" type="button" id="registerPage_btnMcode_1">获取激活码</button>
+                        <span class="th-note">&nbsp;</span>
+                    </div>
+                    <div class="th-textbox-group th-textbox-group-rule">
+                        <input type="checkbox" id="agreeRule" checked="" data-model="agreeRule" data-controltype="CheckBox">
+                        <label for="agreeRule">我已阅读并同意遵守</label>
+                        <a class="a" href="###" target="_blank">《泰游记用户服务协议》</a>
+                    </div>
+                    <div class="th-textbox-group th-textbox-group-submit">
+                        <button class="th-btn th-btn-orange" data-model="submitBtn" data-controltype="Button" type="button" id="registerPage_submitBtn_1">同意协议并注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="th-footer">
+            <div class="th-inner">
+                <div class="th-cr"> 
+                    <div class="th-links"> 
+                        <div class="th-about" onmouseover="this.className += ' hover'" onmouseout="this.className = this.className.replace(/\shover/g, '')">
+                            <a href="###" target="_blank" rel="nofollow" class="th-about-link">关于thai-travel.com</a>
+                            <i></i>
+                            <div class="th-list-wrapper">
+                                <div class="th-about-list"> 
+                                    <a href="###" target="_blank" rel="nofollow">联系我们</a> 
+                                    <a href="###" target="_blank">媒体报道</a> 
+                                    <a href="###" target="_blank" rel="nofollow">用户协议</a> 
+                                    <a href="###" target="_blank" rel="nofollow">常见问题</a>
+                                    <a href="###" target="_blank" rel="nofollow">友情链接</a>
+                                </div> 
+                            </div>
+                        </div>
+                        <span>|</span>
+                        <a href="###" target="_blank" rel="nofollow">投资者关系</a>
+                        <span>|</span>
+                        <a href="###" target="_blank" rel="nofollow">酒店加盟</a>
+                        <span>|</span>
+                        <a href="###" target="_blank" rel="nofollow">业务合作</a>
+                        <span>|</span>
+                        <a href="###" target="_blank" rel="nofollow">职位招聘</a>
+                        <span>|</span>
+                        <a href="###" class="emph" target="_blank" rel="nofollow">我要投诉</a>
+                        <span>|</span>
+                        <a href="###" target="_blank" rel="nofollow">安全中心</a>
+                        <span>|</span>
+                        <a href="###" target="_blank" rel="nofollow">About Us</a>
+                    </div> 
+                    <p class="th-copyright">
+                        <span>Copyright ©2015 Thai-travel.com</span>
+                        <span>京公网安备110108901530</span>
+                        <a href="###" target="_blank" rel="nofollow">京ICP备05021087号</a>
+                        <a href="###" target="_blank" rel="nofollow">营业执照信息</a>
+                        <a href="###" target="_blank" rel="nofollow">保险经纪资质</a>
+                        <span class="th-24-hour">泰游记网客服电话10281234</span>
+                    </p> 
+                </div> 
+                <div class="th-stanadrd-list"> 
+                    <ul> 
+                        <li class="th_icon_wosign">
+                            <a href="###" target="_blank" rel="nofollow" title="wosign加密服务"></a>
+                        </li> 
+                        <li class="th_icon_pci">
+                            <a href="###" target="_blank" rel="nofollow" title="去哪儿网通过PCI认证"></a>
+                        </li> 
+                        <li class="th_icon_itrust">
+                            <a href="###" target="_blank" rel="nofollow" title="信用编码：1786892425"></a>
+                        </li> 
+                        <li class="th_icon_beian">
+                            <a href="###" target="_blank" rel="nofollow" title="经营性网站备案信息"></a>
+                        </li> 
+                        <li class="th_icon_szfw">
+                            <a href="###" target="_blank" rel="nofollow" title="诚信网站"></a>
+                        </li> 
+                        <li class="th_icon_knet">
+                            <a href="###" target="_blank" rel="nofollow" title="可信网站身份验证"></a>
+                        </li> 
+                    </ul> 
+                    <div class="clr"></div> 
+                </div> 
+                <script> 
+                    (function () {
+                        var i = new Image();
+                        i.src = "//user.qunar.com/passport/addICK.jsp" + (document.location.protocol === "https:" ? "?ssl" : "");
+                    })();
+                </script>
+            </div>
+        </div>
+        <script language="javascript">
+            var popErr = false;
+            var contact = '';
+            var _ba_utm_l = 'tg';
+            var _ba_utm_s = '216';
+        </script>
+        <script type="text/javascript" src="https://qunarzz.com/jquery/prd/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="https://qunarzz.com/usercenter/prd/scripts/user-register@319ea9fea0e5b3169f600d34b9a10255.js"></script><div style="display: none;"></div>
+    </body>
+</html>
