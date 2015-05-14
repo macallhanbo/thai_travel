@@ -17,7 +17,7 @@
 	display: inline-block;
 	*zoom:1;
 	*display:inline;
-	width:110px;
+	width:128px;
 	text-align:left;
 	border:1px solid transparent;
 	_border:0;
@@ -49,7 +49,7 @@
 	bottom:22px;
 	border:1px solid #ddd;
 	background: #fff;
-	width:110px;
+	width:128px;
 	display:none;
 	white-space:normal;
 }
@@ -67,7 +67,7 @@
 }
 .th-footer .th-about i {
 	font-size:0;
-	background:url(/images/common/hf/arc.png) no-repeat left bottom;
+	background:url(/thai/Public/img/thai_arc.png) no-repeat left bottom;
 	width:7px;
 	height:4px;
 	display: inline-block;
