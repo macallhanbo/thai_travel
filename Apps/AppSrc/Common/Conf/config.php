@@ -11,6 +11,7 @@ return array(
     'MODULE_ALLOW_LIST' => array('Home'),
     'LOAD_EXT_CONFIG' => array(
         APP_ENV . '/app_config',
-        APP_ENV . '/db'
+        APP_ENV . '/db',
+        APP_ENV . '/error_message'
     ),
 );

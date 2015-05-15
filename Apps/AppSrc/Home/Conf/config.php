@@ -13,6 +13,7 @@ return array(
     // 设置路由规则
     'URL_ROUTE_RULES' => array(
         'index' => array('Home/Index/index'),
-        'regist' => array('Home/Index/regist'),
+        'register' => array('Home/Index/register'),
+        'ajax/register_email_validation' => array('Home/Ajax/registerEmailValidation'),
     ),
 );

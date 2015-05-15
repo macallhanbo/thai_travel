@@ -19,7 +19,7 @@ class IndexController extends HomeBaseController {
      * created_at:2015-5-12 17:35
      * updated_at:2015-5-12 17:35
      */
-    public function registAction() {
+    public function registerAction() {
         layout(false); // 临时关闭当前模板的布局功能
         $this->assign('title_name', '泰游记-新用户注册');
         $this->display();

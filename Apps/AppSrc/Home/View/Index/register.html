@@ -58,13 +58,13 @@
                     <div class="ad"></div>
                 </div>
                 <form>
+                    
                     <input type="hidden" value="1" name="usertype" id="usertype">
-                    <input type="hidden" value="" name="ref" id="ref">
                     <div class="th-textbox-group" data-model="email" data-controltype="TextBoxGroup" id="registerPage_email_1">
                         <label class="th-label">注册邮箱</label>
                         <input class="th-textbox" type="text" id="email" placeholder="请输入注册邮箱" autocomplete="off">
                         <b class="th-textbox-clear" style="display:none;"></b>
-                        <span class="th-note"></span>
+                        <span class="th-note" id="span_test"></span>
                     </div>
                     <div class="th-textbox-group pw-tips pw-tips-hidden">
                         <label class="th-label">登录密码</label>
@@ -78,33 +78,67 @@
                         </ul>
                     </div>
                     <script type="text/javascript">
-                        var EMAIL_VALIDATION = /^[a-zA-Z0-9_+.-]+@([a-zA-Z0-9-]+\.)+[a-z0-9]{2,4}$/;
+                        var EMAIL_VALIDATION = /^[a-zA-Z0-9_+.-]+@([a-zA-Z0-9-]+\.)+[a-z0-9]{2,4}$/i;
                         var ALPH_VALIDATION = /[A-Za-z]/;
                         var NUM_VALIDATION = /[0-9]/;
                         var SIGN_VALIDATION = /[~!@#$%^&*()\-_=+;:'\",<.>/?\\]/;
                         var PW_VALIDATION = /^[0-9a-zA-Z\~\!\@\#\$%\^&\*\(\)\-\_\=\+\;\:\'\"\,\<\.\>\/\?\\]{6,30}$/;
                         
                         $(document).ready(function(){
+                            //------------------------邮箱验证区域START------------------------
                             var email = $("#email");
                             var clear_tag = email.siblings("b.th-textbox-clear");
+                            
                             email.focus(function(){
                                 clear_tag.css('display', 'inline');
                             });
+                            
                             email.blur(function(){
-                                clear_tag.css('display', 'none');
                                 var email_val = email.val();
-                                var is_email = EMAIL_VALIDATION.test(email_val);
-                                if(is_email){
-                                    email.siblings("span").removeClass('th-note-error');
-                                    email.siblings("span").html("请输入有效的邮件地址");
-                                }else{
+                                if(email_val == ''){
                                     email.siblings("span").addClass('th-note-error');
-                                    email.siblings("span").html('');
+                                    email.siblings("span").html("邮箱不能为空");
+                                }else{
+                                    var is_email = EMAIL_VALIDATION.test(email_val);
+                                    if(is_email){
+                                        $.ajax({
+                                            type : 'post',
+                                            url : 'ajax/register_email_validation',
+                                            data : {'email' : email_val},
+                                            dataType : 'json',
+                                            success : function(data) {
+                                                if (data.status == 1) {
+                                                    var email_registerable = data['data']['email_registerable'];
+                                                    var email_resp = data['data']['email_resp'];
+
+                                                    if(email_registerable == 1){
+                                                        email.siblings("span").removeClass('th-note-error');
+                                                    }else{
+                                                        email.siblings("span").addClass('th-note-error');
+                                                    }
+
+                                                    email.siblings("span").html(email_resp);
+                                                } else {
+
+                                                }
+                                            },
+                                            error : function() {
+
+                                            }
+                                        });
+                                    }else{
+                                        email.siblings("span").addClass('th-note-error');
+                                        email.siblings("span").html("请输入有效的邮件地址");
+                                    }
                                 }
                             });
                             clear_tag.click(function(){
+                                clear_tag.css('display', 'none');
                                 email.val("");
+                                email.siblings("span").addClass('th-note-error');
+                                email.siblings("span").html("邮箱不能为空");
                             });
+                            //--------------------------邮箱验证区域END--------------------------
                             
                             
                             $("input:password").focus(function(){
@@ -160,18 +194,18 @@
                         <a class="a" href="###" target="_blank">《泰游记用户服务协议》</a>
                     </div>
                     <div class="th-textbox-group th-textbox-group-submit">
-                        <button class="th-btn th-btn-orange" id="regist_submitBtn">同意协议并注册</button>
+                        <button class="th-btn th-btn-orange" id="register_submitBtn">同意协议并注册</button>
                     </div>
                     <script type="text/javascript">
                         $(document).ready(function(){
                             $("#agreeRule").click(function(){
                                 var isChecked = $('#agreeRule').prop('checked');
                                 if( isChecked === true){
-                                    $("#regist_submitBtn").removeClass("th-btn-disable");
-                                    $("#regist_submitBtn").attr("disabled",false);
+                                    $("#register_submitBtn").removeClass("th-btn-disable");
+                                    $("#register_submitBtn").attr("disabled",false);
                                 }else{
-                                    $("#regist_submitBtn").addClass("th-btn-disable");
-                                    $("#regist_submitBtn").attr("disabled",true);
+                                    $("#register_submitBtn").addClass("th-btn-disable");
+                                    $("#register_submitBtn").attr("disabled",true);
                                 }
                             });
                           })

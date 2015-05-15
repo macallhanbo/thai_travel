@@ -259,6 +259,15 @@ input.th-textbox::-ms-reveal {
   background-color: white;
   display: none;
 }
+
+.textbox-eye {
+  margin-left: -27px;
+  background: url("/thai/Public/img/thai-show-eye.png") no-repeat 3px center;
+  background-color: white;
+  _margin-top: 13px;
+  _background-image: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/thai/Public/img/thai-show-eye.png");
+}
 .pw-tips {
     position:relative;
     z-index:100000
