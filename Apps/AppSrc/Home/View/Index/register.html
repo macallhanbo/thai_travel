@@ -68,9 +68,10 @@
                     </div>
                     <div class="th-textbox-group pw-tips pw-tips-hidden">
                         <label class="th-label">登录密码</label>
-                        <input class="th-textbox" type="password" placeholder="请输入登录密码" maxlength="30">
-                        <b class="textbox-eye" style="display: none;"></b>
-                        <span class="th-note th-note-error">&nbsp;</span>
+                        <input class="th-textbox-preview">
+                        <input class="th-textbox" type="password" id="pwd" placeholder="请输入登录密码" maxlength="30">
+                        <b class="th-textbox-eye" style="display: none;"></b>
+                        <span class="th-note">&nbsp;</span>
                         <ul>
                             <li id="pw_length">长度为6-30个字符</li>
                             <li id="pw_chars">建议由数字、字母、符号组成</li>
@@ -89,65 +90,149 @@
                             var email = $("#email");
                             var clear_tag = email.siblings("b.th-textbox-clear");
                             
-                            email.focus(function(){
-                                clear_tag.css('display', 'inline');
+                            email.keyup(function()
+                            {
+                                var email_val = email.val();
+                                if(email_val == '')
+                                {
+                                    clear_tag.css('display', 'none');
+                                }
+                                else
+                                {
+                                    clear_tag.css('display', 'inline');
+                                }
                             });
                             
-                            email.blur(function(){
+                            email.mousedown(function()
+                            {
                                 var email_val = email.val();
-                                if(email_val == ''){
-                                    email.siblings("span").addClass('th-note-error');
+                                if(email_val != '')
+                                {
+                                    clear_tag.css('display', 'inline');
+                                }
+                            });
+                            
+                            clear_tag.mousedown(function()
+                            {
+                                email.val("");
+                                clear_tag.css('display', 'none');
+                                email.siblings("span").removeClass('th-note-ok').addClass('th-note-error');
+                                email.siblings("span").html("邮箱不能为空");
+                            });
+                            
+                            email.blur(function()
+                            {
+                                var email_val = email.val();
+                                if(email_val == '')
+                                {
+                                    email.siblings("span").removeClass('th-note-ok').addClass('th-note-error');
                                     email.siblings("span").html("邮箱不能为空");
                                 }else{
                                     var is_email = EMAIL_VALIDATION.test(email_val);
-                                    if(is_email){
+                                    if(is_email)
+                                    {
                                         $.ajax({
                                             type : 'post',
                                             url : 'ajax/register_email_validation',
                                             data : {'email' : email_val},
                                             dataType : 'json',
-                                            success : function(data) {
-                                                if (data.status == 1) {
+                                            success : function(data) 
+                                            {
+                                                if (data.status == 1)
+                                                {
                                                     var email_registerable = data['data']['email_registerable'];
                                                     var email_resp = data['data']['email_resp'];
 
-                                                    if(email_registerable == 1){
-                                                        email.siblings("span").removeClass('th-note-error');
-                                                    }else{
-                                                        email.siblings("span").addClass('th-note-error');
+                                                    if(email_registerable == 1)
+                                                    {
+                                                        email.siblings("span").removeClass('th-note-error').addClass('th-note-ok') ;
+                                                    }
+                                                    else
+                                                    {
+                                                        email.siblings("span").removeClass('th-note-ok').addClass('th-note-error');
                                                     }
 
                                                     email.siblings("span").html(email_resp);
-                                                } else {
+                                                } 
+                                                else 
+                                                {
 
                                                 }
                                             },
-                                            error : function() {
+                                            error : function() 
+                                            {
 
                                             }
                                         });
-                                    }else{
-                                        email.siblings("span").addClass('th-note-error');
+                                    }
+                                    else
+                                    {
+                                        email.siblings("span").removeClass('th-note-ok').addClass('th-note-error');
                                         email.siblings("span").html("请输入有效的邮件地址");
                                     }
                                 }
-                            });
-                            clear_tag.click(function(){
                                 clear_tag.css('display', 'none');
-                                email.val("");
-                                email.siblings("span").addClass('th-note-error');
-                                email.siblings("span").html("邮箱不能为空");
                             });
                             //--------------------------邮箱验证区域END--------------------------
+                        });
+                        
+                        $(document).ready(function () {
+                            //------------------------密码验证区域START------------------------
+                            var pwd = $("#pwd");
+                            var eye_tag = pwd.siblings("b.th-textbox-eye");
                             
+                            pwd.keyup(function()
+                            {
+                                
+                                var pwd_val = pwd.val();
+                                if(pwd_val == '')
+                                {
+                                    eye_tag.css('display', 'none');
+                                }
+                                else
+                                {
+                                    eye_tag.css('display', 'inline');
+                                }
+                            });
                             
-                            $("input:password").focus(function(){
+                            pwd.mousedown(function()
+                            {
+                                var pwd_val = pwd.val();
+                                if(pwd_val != '')
+                                {
+                                    eye_tag.css('display', 'inline');
+                                }
+                            });
+                            
+                            eye_tag.on('mousedown',function()
+                            {
+                                pwd.attr('type','text');
+                            });
+                            
+                            eye_tag.on('mouseup',function()
+                            {
+                                pwd.attr('type','password');
+                            });
+                            
+                            pwd.on('blur',function(){
+                                var pwd_val = pwd.val();
+                                if(pwd_val.length < 8)
+                                {
+                                    pwd.siblings("span").removeClass('th-note-ok').addClass('th-note-error');
+                                    pwd.siblings("span").html("长度为8-30个字符");
+                                }else{
+                                    pwd.siblings("span").removeClass('th-note-error').addClass('th-note-ok') ;
+                                    pwd.siblings("span").html("");
+                                }
+                            });
+                            
+                            $("input:password").focus(function () {
                                 $(this).parent().removeClass("pw-tips-hidden");
                             });
-                            $("input:password").blur(function(){
+                            $("input:password").blur(function () {
                                 $(this).parent().addClass("pw-tips-hidden");
                             });
-                            $("input:password").keyup(function(){
+                            $("input:password").keyup(function () {
                                 var email = $("#email").val();
                                 var pw = $("input:password").val();
 
@@ -155,24 +240,25 @@
                                 var reg_num = NUM_VALIDATION.test(pw);
                                 var reg_sign = SIGN_VALIDATION.test(pw);
 
-                                if((reg_alph && reg_num) || (reg_alph && reg_sign) || (reg_num && reg_sign)){
+                                if ((reg_alph && reg_num) || (reg_alph && reg_sign) || (reg_num && reg_sign)) {
                                     $("#pw_chars").addClass("bingo");
-                                }else{
+                                } else {
                                     $("#pw_chars").removeClass("bingo");
                                 }
-                                
-                                if(pw.length >= 6 && pw.length <= 30){
+
+                                if (pw.length >= 6 && pw.length <= 30) {
                                     $("#pw_length").addClass("bingo");
-                                }else{
+                                } else {
                                     $("#pw_length").removeClass("bingo");
                                 }
-                                
-                                if(pw != email){
+
+                                if (pw != email) {
                                     $("#pw_email").addClass("bingo");
-                                }else{
+                                } else {
                                     $("#pw_email").removeClass("bingo");
                                 }
                             });
+                            //--------------------------密码验证区域END--------------------------
                         });
                     </script>
                     <div class="th-textbox-group" data-model="vcode" data-controltype="TextBoxGroupVCode" id="registerPage_vcode_1">

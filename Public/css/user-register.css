@@ -246,6 +246,12 @@ input.th-textbox::-ms-reveal {
   background: url(/thai/Public/img/thai-error-note.png) 0 45% no-repeat;
 }
 
+.th-textbox-group .th-note-ok {
+  display: inline-block;
+  padding-left: 20px;
+  background: url(/thai/Public/img/thai-ok-note.gif) 0 45% no-repeat;
+}
+
 .th-textbox-clear, 
 .th-textbox-eye {
   position: absolute;
@@ -260,13 +266,31 @@ input.th-textbox::-ms-reveal {
   display: none;
 }
 
-.textbox-eye {
+.th-textbox-eye {
   margin-left: -27px;
   background: url("/thai/Public/img/thai-show-eye.png") no-repeat 3px center;
   background-color: white;
   _margin-top: 13px;
   _background-image: none;
   _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/thai/Public/img/thai-show-eye.png");
+}
+.th-textbox-preview {
+  display: none;
+}
+input{
+    outline:0
+}
+.th-textbox-preview-show{
+    padding:0 0 0 10px;
+    border:1px solid #ccc;
+    color:#666;outline:0 none;
+    font-size:14px;
+    background-color:#fff;
+    border-color:#5abec6
+}
+.th-textbox-group 
+.th-textbox-hidden{
+    display:none
 }
 .pw-tips {
     position:relative;
